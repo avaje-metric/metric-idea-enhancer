@@ -1,0 +1,62 @@
+<idea-plugin version="2">
+  <id>org.avaje.metric.enhancer</id>
+  <name>Avaje Metric Enhancer</name>
+  <version>1.0</version>
+  <vendor url="http://avaje-metric.github.io">Rob Bygrave</vendor>
+  <depends>com.intellij.modules.java</depends>
+
+  <description><![CDATA[
+      Post-compile Avaje metrics enhancement
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <b>4.1.1</b> IDEA 13+ avaje-metric-agent version 4.1.1<br>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+
+  <project-components>
+    <component>
+      <implementation-class>org.avaje.idea.metric.plugin.MetricsActionComponent</implementation-class>
+      <interface-class>org.avaje.idea.metric.plugin.MetricsActionComponent</interface-class>
+      <!-- For configuration save in iws files -->
+      <option name="workspace" value="true"/>
+    </component>
+  </project-components>
+
+  <actions>
+    <action class="org.avaje.idea.metric.plugin.ToggleEbeanAction"
+            text="Avaje Metrics Enhancement"
+            description="Avaje Metrics enhancement - http://avaje-metric.github.io"
+            id="org.avaje.idea.metric.plugin.ToggleEbeanAction">
+      <add-to-group anchor="after" group-id="BuildMenu" relative-to-action="Compile"/>
+      <add-to-group anchor="after" group-id="ProjectViewPopupMenu" relative-to-action="Compile"/>
+    </action>
+  </actions>
+
+</idea-plugin>
