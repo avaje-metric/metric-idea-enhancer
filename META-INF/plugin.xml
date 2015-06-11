@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>org.avaje.metric.enhancer</id>
   <name>Avaje Metric Enhancer</name>
-  <version>1.0</version>
+  <version>4.2.1</version>
   <vendor url="http://avaje-metric.github.io">Rob Bygrave</vendor>
   <depends>com.intellij.modules.java</depends>
 
@@ -10,7 +10,7 @@
     ]]></description>
 
   <change-notes><![CDATA[
-      <b>4.1.1</b> IDEA 13+ avaje-metric-agent version 4.1.1<br>
+      <b>4.2.1</b> IDEA 13+ avaje-metric-agent version 4.2.1<br>
     ]]>
   </change-notes>
 

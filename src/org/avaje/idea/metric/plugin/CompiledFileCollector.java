@@ -38,24 +38,26 @@ public class CompiledFileCollector implements CompilationStatusListener {
 
   @Override
   public void fileGenerated(String outputRoot, String relativePath) {
+
     // Collect all valid compiled '.class' files
-    final CompiledFile compiledFile = createCompiledFile(outputRoot, relativePath);
+    CompiledFile compiledFile = createCompiledFile(outputRoot, relativePath);
     if (compiledFile != null) {
       this.compiledClasses.put(compiledFile.className, compiledFile.file);
     }
   }
 
   private CompiledFile createCompiledFile(String outputRoot, String relativePath) {
+
     if (outputRoot == null || relativePath == null || !relativePath.endsWith(".class")) {
       return null;
     }
 
-    final File file = new File(outputRoot, relativePath);
+    File file = new File(outputRoot, relativePath);
     if (!file.exists() || !isJavaClass(file)) {
       return null;
     }
 
-    final String className = resolveClassName(relativePath);
+    String className = resolveClassName(relativePath);
 
     return new CompiledFile(file, className);
   }
@@ -64,7 +66,7 @@ public class CompiledFileCollector implements CompilationStatusListener {
    * Given a content path and a class file path, resolve the fully qualified class name
    */
   private String resolveClassName(String relativePath) {
-    final int extensionPos = relativePath.lastIndexOf('.');
+    int extensionPos = relativePath.lastIndexOf('.');
     return relativePath.substring(0, extensionPos).replace('/', '.');
   }
 
@@ -73,13 +75,13 @@ public class CompiledFileCollector implements CompilationStatusListener {
    */
   private boolean isJavaClass(File file) {
     try (InputStream is = new FileInputStream(file)) {
-      final byte[] buf = new byte[2];
-      final int read = is.read(buf, 0, 2);
+      byte[] buf = new byte[2];
+      int read = is.read(buf, 0, 2);
       if (read < buf.length) {
         return false;
       }
-      return buf[0] == (byte) 0xCA &&
-        buf[1] == (byte) 0xFE;
+      return buf[0] == (byte) 0xCA && buf[1] == (byte) 0xFE;
+
     } catch (IOException e) {
       e.printStackTrace();
       return false;
@@ -87,16 +89,16 @@ public class CompiledFileCollector implements CompilationStatusListener {
   }
 
   @Override
-  public void compilationFinished(boolean aborted,
-                                  int errors,
-                                  int warnings,
-                                  CompileContext compileContext) {
+  public void compilationFinished(boolean aborted, int errors, int warnings, CompileContext compileContext) {
+
     new MetricsEnhancementTask(compileContext, compiledClasses).process();
     this.compiledClasses = new HashMap<>();
   }
 
   public static class CompiledFile {
+
     private final File file;
+
     private final String className;
 
     private CompiledFile(File file, String className) {

@@ -75,14 +75,14 @@ public class MetricsEnhancementTask {
 
   private void doProcess() throws IOException, IllegalClassFormatException {
 
-    compileContext.addMessage(CompilerMessageCategory.INFORMATION, "Avaje metrics enhancement started v4 ...", null, -1, -1);
+    compileContext.addMessage(CompilerMessageCategory.INFORMATION, "Avaje metrics enhancement started ...", null, -1, -1);
 
 
     IdeaClassBytesReader classBytesReader = new IdeaClassBytesReader(compileContext, compiledClasses);
 
-    IdeaClassLoader cl = new IdeaClassLoader(Thread.currentThread().getContextClassLoader(), classBytesReader);
+    IdeaClassLoader classLoader = new IdeaClassLoader(Thread.currentThread().getContextClassLoader(), classBytesReader);
 
-    final Transformer transformer = new Transformer("debug=" + DEBUG, cl, classBytesReader);
+    final Transformer transformer = new Transformer("debug=" + DEBUG, classLoader);
 
     transformer.setLogout(new PrintStream(new ByteArrayOutputStream()) {
       @Override
@@ -100,7 +100,7 @@ public class MetricsEnhancementTask {
     progressIndicator.setIndeterminate(true);
     progressIndicator.setText("Avaje metrics enhancement");
 
-    InputStreamTransform isTransform = new InputStreamTransform(transformer, cl);//this.getClass().getClassLoader());
+    InputStreamTransform isTransform = new InputStreamTransform(transformer, classLoader);//this.getClass().getClassLoader());
 
     for (Entry<String, File> entry : compiledClasses.entrySet()) {
       String className = entry.getKey();
@@ -119,6 +119,6 @@ public class MetricsEnhancementTask {
       }
     }
 
-    compileContext.addMessage(CompilerMessageCategory.INFORMATION, "Avaje metrics enhancement done!", null, -1, -1);
+    compileContext.addMessage(CompilerMessageCategory.INFORMATION, "Avaje metrics enhancement complete!", null, -1, -1);
   }
 }
