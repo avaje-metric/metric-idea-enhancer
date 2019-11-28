@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.9'
+}
+
+group 'io.avaje.metrics.tools'
+version '8.2'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.avaje.metrics:metrics-agent:8.2-SNAPSHOT'
+    testCompile 'junit:junit:4.12'
+}
+
+intellij {
+    version '2019.1.3'
+}
+
+patchPluginXml {
+    sinceBuild '161'
+    untilBuild ''
+    changeNotes """
+      <em>8.2</em> - Complete rebuild<br>
+      """
+}

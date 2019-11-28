@@ -1,0 +1,61 @@
+<idea-plugin>
+    <id>org.avaje.metric.enhancer</id>
+    <name>Avaje metrics enhancer</name>
+    <vendor url="https://avaje.io/metrics">avaje</vendor>
+
+    <description><![CDATA[
+    <h3>avaje metrics enhancement</h3>
+    <p>
+        Uses metrics-agent to perform enhancement for <code>@Timed</code>.
+    </p>
+    <p>&nbsp;</p>
+
+    <h3>Enable per project</h3>
+    <table width="100%">
+    <tr>
+      <td width="200px" valign="top">
+        Enabled per project via <b>Build</b> menu
+      </td>
+      <td>
+        <p><img src="https://ebean.io/images/ebean-idea-build.png"></p>
+        <p>&nbsp;</p>
+      </td>
+    </tr>
+    <tr>
+      <td width="200px" valign="top">
+        Or enable via <b>File | Settings | Ebean plugin</b>.
+      </td>
+      <td>
+        <p><img src="https://ebean.io/images/ebean-idea-settings-600.png"></p>
+      </td>
+    </tr>
+    </table>
+    <p>
+       &nbsp;
+    </p>
+    ]]></description>
+
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <runConfigurationExtension id="ebeanAgent" implementation="io.avaje.metrics.idea.AgentRunConfigurationExtension"/>
+        <projectConfigurable groupId="root" displayName="avaje metrics plugin" id="settings.io.ebean.enhancement" instance="io.avaje.metrics.idea.ProjectSettingsConfig"/>
+    </extensions>
+
+    <project-components>
+        <component>
+            <implementation-class>io.avaje.metrics.idea.StateComponent</implementation-class>
+            <option name="workspace" value="true"/>
+        </component>
+    </project-components>
+
+    <actions>
+        <action class="io.avaje.metrics.idea.ToggleAction"
+                text="Avaje metrics enhancement"
+                description="avaje metrics enhancement using javaagent - https://avaje.io/metrics"
+                id="metrics.plugin.ToggleAction">
+            <add-to-group anchor="after" group-id="BuildMenu" relative-to-action="Compile"/>
+            <add-to-group anchor="after" group-id="ProjectViewPopupMenu" relative-to-action="Compile"/>
+        </action>
+    </actions>
+</idea-plugin>
