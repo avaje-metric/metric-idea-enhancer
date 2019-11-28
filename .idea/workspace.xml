@@ -2,43 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb5fc7f1-16d5-4626-8fe1-f59435b847f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/AgentJarFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/AgentRunConfigurationExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/PluginState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/ProjectSettingsConfig.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/ProjectSettingsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/StateComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/avaje/metrics/idea/ToggleAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/rob.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/avaje_metric_agent_4_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/avaje-metric-agent-4.2.1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/metric-idea-enhancer.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/CompiledFileCollector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/IdeaClassBytesReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/IdeaClassLoader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/InputStreamTransform.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/MetricsActionComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/MetricsEnhancementTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/avaje/idea/metric/plugin/ToggleEbeanAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +41,9 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -136,8 +105,17 @@
       <updated>1574935783094</updated>
       <workItem from="1574935785139" duration="1130000" />
       <workItem from="1574936964190" duration="1908000" />
-      <workItem from="1574940326735" duration="469000" />
+      <workItem from="1574940326735" duration="1351000" />
+      <workItem from="1574941802180" duration="621000" />
     </task>
+    <task id="LOCAL-00001" summary="Update for rebuild">
+      <created>1574940850487</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1574940850487</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,5 +133,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update for rebuild" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update for rebuild" />
   </component>
 </project>

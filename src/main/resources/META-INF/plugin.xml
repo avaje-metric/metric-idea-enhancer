@@ -17,16 +17,8 @@
         Enabled per project via <b>Build</b> menu
       </td>
       <td>
-        <p><img src="https://ebean.io/images/ebean-idea-build.png"></p>
+        <p><img src="https://avaje.io/images/metrics-plugin-enable.png"></p>
         <p>&nbsp;</p>
-      </td>
-    </tr>
-    <tr>
-      <td width="200px" valign="top">
-        Or enable via <b>File | Settings | Ebean plugin</b>.
-      </td>
-      <td>
-        <p><img src="https://ebean.io/images/ebean-idea-settings-600.png"></p>
       </td>
     </tr>
     </table>
@@ -38,7 +30,7 @@
     <depends>com.intellij.modules.java</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <runConfigurationExtension id="ebeanAgent" implementation="io.avaje.metrics.idea.AgentRunConfigurationExtension"/>
+        <runConfigurationExtension id="avajeMetricsAgent" implementation="io.avaje.metrics.idea.AgentRunConfigurationExtension"/>
         <projectConfigurable groupId="root" displayName="avaje metrics plugin" id="settings.io.ebean.enhancement" instance="io.avaje.metrics.idea.ProjectSettingsConfig"/>
     </extensions>
 
