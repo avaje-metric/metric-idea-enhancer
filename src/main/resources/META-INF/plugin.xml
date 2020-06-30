@@ -44,7 +44,7 @@
     <actions>
         <action class="io.avaje.metrics.idea.ToggleAction"
                 text="Avaje metrics enhancement"
-                description="avaje metrics enhancement using javaagent - https://avaje.io/metrics"
+                description="metrics enhancement using javaagent - https://avaje.io/metrics"
                 id="metrics.plugin.ToggleAction">
             <add-to-group anchor="after" group-id="BuildMenu" relative-to-action="Compile"/>
             <add-to-group anchor="after" group-id="ProjectViewPopupMenu" relative-to-action="Compile"/>
